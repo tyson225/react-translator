@@ -34,7 +34,7 @@ const Languages = ({ language, onLanguageChange }) => {
       <label className='label'>Select Language</label>
 
       <div className={`dropdown ${open && 'is-active'}`}>
-        <div className='dropdown-trigger'>
+        <div className='dropdown-toggle' href='#' role='button'>
           <button className='button' onClick={() => setOpen(!open)}>
             <span>{languageConfig.label}</span>
             <span className='icon is-small'>
@@ -43,8 +43,8 @@ const Languages = ({ language, onLanguageChange }) => {
           </button>
         </div>
 
-        <div className='dropdown-menu'>
-          <div className='dropdown-content'>
+        <div className='dropdown'>
+          <div className='dropdown-toggle'>
             {LANGUAGES.map(({ label, value }) => {
               return (
                 <a
